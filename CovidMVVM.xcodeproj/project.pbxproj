@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0779EBBA88CB9218AF97E1B2 /* Pods_CovidMVVM_CovidMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87E2F74FF33BFF087DB3BA0 /* Pods_CovidMVVM_CovidMVVMUITests.framework */; };
 		3D35DB6B25CB688E00019A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6A25CB688E00019A84 /* AppDelegate.swift */; };
 		3D35DB6D25CB688E00019A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */; };
 		3D35DB6F25CB688E00019A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6E25CB688E00019A84 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		3D35DB7725CB688F00019A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DB7525CB688F00019A84 /* LaunchScreen.storyboard */; };
 		3D35DB8225CB689000019A84 /* CovidMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB8125CB689000019A84 /* CovidMVVMTests.swift */; };
 		3D35DB8D25CB689000019A84 /* CovidMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB8C25CB689000019A84 /* CovidMVVMUITests.swift */; };
+		5F148E1A7747290779467EE9 /* Pods_CovidMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */; };
+		948E294878831F043BB01757 /* Pods_CovidMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1436B011CA843404B7940D49 /* Pods-CovidMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		23EF72E7D28C42B9214ECFB4 /* Pods-CovidMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
+		37DDDBF56FA63E7A8EDFBB87 /* Pods-CovidMVVM-CovidMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM-CovidMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D35DB6725CB688E00019A84 /* CovidMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D35DB6A25CB688E00019A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		3D35DB8825CB689000019A84 /* CovidMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D35DB8C25CB689000019A84 /* CovidMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMVVMUITests.swift; sourceTree = "<group>"; };
 		3D35DB8E25CB689000019A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D437B7CA6A96DCFC165004A /* Pods-CovidMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87E2F74FF33BFF087DB3BA0 /* Pods_CovidMVVM_CovidMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMVVM_CovidMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F148E1A7747290779467EE9 /* Pods_CovidMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948E294878831F043BB01757 /* Pods_CovidMVVMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0779EBBA88CB9218AF97E1B2 /* Pods_CovidMVVM_CovidMVVMUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				3D35DB8025CB689000019A84 /* CovidMVVMTests */,
 				3D35DB8B25CB689000019A84 /* CovidMVVMUITests */,
 				3D35DB6825CB688E00019A84 /* Products */,
+				5A410DC3E94F3327B8CD99A7 /* Pods */,
+				6812A129480062FED3CC524C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,30 @@
 			path = CovidMVVMUITests;
 			sourceTree = "<group>";
 		};
+		5A410DC3E94F3327B8CD99A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D437B7CA6A96DCFC165004A /* Pods-CovidMVVM.debug.xcconfig */,
+				1436B011CA843404B7940D49 /* Pods-CovidMVVM.release.xcconfig */,
+				37DDDBF56FA63E7A8EDFBB87 /* Pods-CovidMVVM-CovidMVVMUITests.debug.xcconfig */,
+				B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */,
+				79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */,
+				23EF72E7D28C42B9214ECFB4 /* Pods-CovidMVVMTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6812A129480062FED3CC524C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */,
+				D87E2F74FF33BFF087DB3BA0 /* Pods_CovidMVVM_CovidMVVMUITests.framework */,
+				FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D35DB9125CB689000019A84 /* Build configuration list for PBXNativeTarget "CovidMVVM" */;
 			buildPhases = (
+				1B6AE94C22B09BB40F4CFC5C /* [CP] Check Pods Manifest.lock */,
 				3D35DB6325CB688E00019A84 /* Sources */,
 				3D35DB6425CB688E00019A84 /* Frameworks */,
 				3D35DB6525CB688E00019A84 /* Resources */,
+				CE02265F545D8D5C8AA52097 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D35DB9425CB689000019A84 /* Build configuration list for PBXNativeTarget "CovidMVVMTests" */;
 			buildPhases = (
+				F1083018FEE54D9C0119236D /* [CP] Check Pods Manifest.lock */,
 				3D35DB7925CB689000019A84 /* Sources */,
 				3D35DB7A25CB689000019A84 /* Frameworks */,
 				3D35DB7B25CB689000019A84 /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D35DB9725CB689000019A84 /* Build configuration list for PBXNativeTarget "CovidMVVMUITests" */;
 			buildPhases = (
+				642DDBD2D750BD5CFEE6E5D2 /* [CP] Check Pods Manifest.lock */,
 				3D35DB8425CB689000019A84 /* Sources */,
 				3D35DB8525CB689000019A84 /* Frameworks */,
 				3D35DB8625CB689000019A84 /* Resources */,
+				980E0A291FECD4CDC0075A00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B6AE94C22B09BB40F4CFC5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CovidMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		642DDBD2D750BD5CFEE6E5D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CovidMVVM-CovidMVVMUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		980E0A291FECD4CDC0075A00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE02265F545D8D5C8AA52097 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1083018FEE54D9C0119236D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CovidMVVMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D35DB6325CB688E00019A84 /* Sources */ = {
@@ -433,6 +582,7 @@
 		};
 		3D35DB9225CB689000019A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D437B7CA6A96DCFC165004A /* Pods-CovidMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +601,7 @@
 		};
 		3D35DB9325CB689000019A84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1436B011CA843404B7940D49 /* Pods-CovidMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +620,7 @@
 		};
 		3D35DB9525CB689000019A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +642,7 @@
 		};
 		3D35DB9625CB689000019A84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23EF72E7D28C42B9214ECFB4 /* Pods-CovidMVVMTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +664,7 @@
 		};
 		3D35DB9825CB689000019A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37DDDBF56FA63E7A8EDFBB87 /* Pods-CovidMVVM-CovidMVVMUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +684,7 @@
 		};
 		3D35DB9925CB689000019A84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
