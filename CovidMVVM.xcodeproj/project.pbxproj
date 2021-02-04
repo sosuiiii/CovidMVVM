@@ -3,19 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0779EBBA88CB9218AF97E1B2 /* Pods_CovidMVVM_CovidMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87E2F74FF33BFF087DB3BA0 /* Pods_CovidMVVM_CovidMVVMUITests.framework */; };
 		3D35DB6B25CB688E00019A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6A25CB688E00019A84 /* AppDelegate.swift */; };
 		3D35DB6D25CB688E00019A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */; };
-		3D35DB6F25CB688E00019A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6E25CB688E00019A84 /* ViewController.swift */; };
+		3D35DB6F25CB688E00019A84 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6E25CB688E00019A84 /* TopViewController.swift */; };
 		3D35DB7225CB688E00019A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DB7025CB688E00019A84 /* Main.storyboard */; };
 		3D35DB7425CB688F00019A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DB7325CB688F00019A84 /* Assets.xcassets */; };
 		3D35DB7725CB688F00019A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DB7525CB688F00019A84 /* LaunchScreen.storyboard */; };
 		3D35DB8225CB689000019A84 /* CovidMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB8125CB689000019A84 /* CovidMVVMTests.swift */; };
 		3D35DB8D25CB689000019A84 /* CovidMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB8C25CB689000019A84 /* CovidMVVMUITests.swift */; };
+		3D35DBCF25CB799300019A84 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBCE25CB799300019A84 /* Colors.swift */; };
+		3D35DBD425CB79A100019A84 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBD325CB79A100019A84 /* Singleton.swift */; };
+		3D35DBD925CB79BA00019A84 /* FirestoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBD825CB79BA00019A84 /* FirestoreData.swift */; };
+		3D35DBDE25CB79C800019A84 /* APIConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBDD25CB79C800019A84 /* APIConst.swift */; };
+		3D35DBE325CB79CD00019A84 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBE225CB79CD00019A84 /* API.swift */; };
+		3D35DBE825CB79D500019A84 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBE725CB79D500019A84 /* Entity.swift */; };
+		3D35DBED25CB79DD00019A84 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBEC25CB79DD00019A84 /* Repository.swift */; };
+		3D35DBFA25CB7A8600019A84 /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DBF925CB7A8600019A84 /* HealthViewController.swift */; };
+		3D35DC0225CB7A8D00019A84 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC0125CB7A8D00019A84 /* ChartViewController.swift */; };
+		3D35DC0725CB7A9800019A84 /* CircleChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC0625CB7A9800019A84 /* CircleChartViewController.swift */; };
+		3D35DC0C25CB7A9E00019A84 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC0B25CB7A9E00019A84 /* ChatViewController.swift */; };
+		3D35DC1125CB7ABD00019A84 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1025CB7ABD00019A84 /* TopViewModel.swift */; };
+		3D35DC1625CB7AC800019A84 /* HealthCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1525CB7AC800019A84 /* HealthCheckViewModel.swift */; };
+		3D35DC1B25CB7ACF00019A84 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1A25CB7ACF00019A84 /* ChartViewModel.swift */; };
+		3D35DC2025CB7AD900019A84 /* CircleChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1F25CB7AD900019A84 /* CircleChartViewModel.swift */; };
+		3D35DC2525CB7AE700019A84 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC2425CB7AE700019A84 /* ChatViewModel.swift */; };
+		3D35DC2A25CB7AFA00019A84 /* CovidStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC2925CB7AFA00019A84 /* CovidStore.swift */; };
+		3D35DC2F25CB7B0100019A84 /* CovidDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC2E25CB7B0100019A84 /* CovidDispatcher.swift */; };
+		3D35DC3425CB7B0A00019A84 /* CovidActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3325CB7B0A00019A84 /* CovidActionCreator.swift */; };
+		3D35DC3925CB7B2400019A84 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */; };
+		3D35DC3E25CB7B3200019A84 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */; };
+		3D35DC4325CB7B3A00019A84 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */; };
 		5F148E1A7747290779467EE9 /* Pods_CovidMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */; };
 		948E294878831F043BB01757 /* Pods_CovidMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +66,7 @@
 		3D35DB6725CB688E00019A84 /* CovidMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D35DB6A25CB688E00019A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D35DB6E25CB688E00019A84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D35DB6E25CB688E00019A84 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		3D35DB7125CB688E00019A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D35DB7325CB688F00019A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D35DB7625CB688F00019A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +77,28 @@
 		3D35DB8825CB689000019A84 /* CovidMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D35DB8C25CB689000019A84 /* CovidMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidMVVMUITests.swift; sourceTree = "<group>"; };
 		3D35DB8E25CB689000019A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D35DBCE25CB799300019A84 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3D35DBD325CB79A100019A84 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		3D35DBD825CB79BA00019A84 /* FirestoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreData.swift; sourceTree = "<group>"; };
+		3D35DBDD25CB79C800019A84 /* APIConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConst.swift; sourceTree = "<group>"; };
+		3D35DBE225CB79CD00019A84 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		3D35DBE725CB79D500019A84 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		3D35DBEC25CB79DD00019A84 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		3D35DBF925CB7A8600019A84 /* HealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
+		3D35DC0125CB7A8D00019A84 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		3D35DC0625CB7A9800019A84 /* CircleChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChartViewController.swift; sourceTree = "<group>"; };
+		3D35DC0B25CB7A9E00019A84 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		3D35DC1025CB7ABD00019A84 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
+		3D35DC1525CB7AC800019A84 /* HealthCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckViewModel.swift; sourceTree = "<group>"; };
+		3D35DC1A25CB7ACF00019A84 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		3D35DC1F25CB7AD900019A84 /* CircleChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChartViewModel.swift; sourceTree = "<group>"; };
+		3D35DC2425CB7AE700019A84 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		3D35DC2925CB7AFA00019A84 /* CovidStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStore.swift; sourceTree = "<group>"; };
+		3D35DC2E25CB7B0100019A84 /* CovidDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDispatcher.swift; sourceTree = "<group>"; };
+		3D35DC3325CB7B0A00019A84 /* CovidActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActionCreator.swift; sourceTree = "<group>"; };
+		3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D437B7CA6A96DCFC165004A /* Pods-CovidMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,11 +162,21 @@
 			children = (
 				3D35DB6A25CB688E00019A84 /* AppDelegate.swift */,
 				3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */,
-				3D35DB6E25CB688E00019A84 /* ViewController.swift */,
 				3D35DB7025CB688E00019A84 /* Main.storyboard */,
+				3D35DBF525CB7A4400019A84 /* Flux */,
+				3D35DBF425CB7A3900019A84 /* View */,
+				3D35DBF225CB7A2800019A84 /* ViewModel */,
+				3D35DBF125CB79F800019A84 /* Extension */,
 				3D35DB7325CB688F00019A84 /* Assets.xcassets */,
 				3D35DB7525CB688F00019A84 /* LaunchScreen.storyboard */,
 				3D35DB7825CB688F00019A84 /* Info.plist */,
+				3D35DBCE25CB799300019A84 /* Colors.swift */,
+				3D35DBD325CB79A100019A84 /* Singleton.swift */,
+				3D35DBD825CB79BA00019A84 /* FirestoreData.swift */,
+				3D35DBDD25CB79C800019A84 /* APIConst.swift */,
+				3D35DBE225CB79CD00019A84 /* API.swift */,
+				3D35DBE725CB79D500019A84 /* Entity.swift */,
+				3D35DBEC25CB79DD00019A84 /* Repository.swift */,
 			);
 			path = CovidMVVM;
 			sourceTree = "<group>";
@@ -145,6 +199,50 @@
 			path = CovidMVVMUITests;
 			sourceTree = "<group>";
 		};
+		3D35DBF125CB79F800019A84 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */,
+				3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */,
+				3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3D35DBF225CB7A2800019A84 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D35DC1025CB7ABD00019A84 /* TopViewModel.swift */,
+				3D35DC1525CB7AC800019A84 /* HealthCheckViewModel.swift */,
+				3D35DC1A25CB7ACF00019A84 /* ChartViewModel.swift */,
+				3D35DC1F25CB7AD900019A84 /* CircleChartViewModel.swift */,
+				3D35DC2425CB7AE700019A84 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3D35DBF425CB7A3900019A84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D35DB6E25CB688E00019A84 /* TopViewController.swift */,
+				3D35DBF925CB7A8600019A84 /* HealthViewController.swift */,
+				3D35DC0125CB7A8D00019A84 /* ChartViewController.swift */,
+				3D35DC0625CB7A9800019A84 /* CircleChartViewController.swift */,
+				3D35DC0B25CB7A9E00019A84 /* ChatViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D35DBF525CB7A4400019A84 /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				3D35DC2925CB7AFA00019A84 /* CovidStore.swift */,
+				3D35DC2E25CB7B0100019A84 /* CovidDispatcher.swift */,
+				3D35DC3325CB7B0A00019A84 /* CovidActionCreator.swift */,
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
 		5A410DC3E94F3327B8CD99A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +253,6 @@
 				79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */,
 				23EF72E7D28C42B9214ECFB4 /* Pods-CovidMVVMTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,8 +504,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D35DB6F25CB688E00019A84 /* ViewController.swift in Sources */,
+				3D35DC3E25CB7B3200019A84 /* UIViewController+Extension.swift in Sources */,
+				3D35DC1B25CB7ACF00019A84 /* ChartViewModel.swift in Sources */,
+				3D35DB6F25CB688E00019A84 /* TopViewController.swift in Sources */,
+				3D35DC0725CB7A9800019A84 /* CircleChartViewController.swift in Sources */,
+				3D35DBD925CB79BA00019A84 /* FirestoreData.swift in Sources */,
+				3D35DBCF25CB799300019A84 /* Colors.swift in Sources */,
+				3D35DC2F25CB7B0100019A84 /* CovidDispatcher.swift in Sources */,
+				3D35DC3425CB7B0A00019A84 /* CovidActionCreator.swift in Sources */,
+				3D35DC2A25CB7AFA00019A84 /* CovidStore.swift in Sources */,
+				3D35DBDE25CB79C800019A84 /* APIConst.swift in Sources */,
+				3D35DC4325CB7B3A00019A84 /* AlertExtension.swift in Sources */,
+				3D35DC1625CB7AC800019A84 /* HealthCheckViewModel.swift in Sources */,
 				3D35DB6B25CB688E00019A84 /* AppDelegate.swift in Sources */,
+				3D35DC0225CB7A8D00019A84 /* ChartViewController.swift in Sources */,
+				3D35DC1125CB7ABD00019A84 /* TopViewModel.swift in Sources */,
+				3D35DBE825CB79D500019A84 /* Entity.swift in Sources */,
+				3D35DC2525CB7AE700019A84 /* ChatViewModel.swift in Sources */,
+				3D35DBD425CB79A100019A84 /* Singleton.swift in Sources */,
+				3D35DBFA25CB7A8600019A84 /* HealthViewController.swift in Sources */,
+				3D35DC3925CB7B2400019A84 /* UIColor+Extension.swift in Sources */,
+				3D35DC2025CB7AD900019A84 /* CircleChartViewModel.swift in Sources */,
+				3D35DC0C25CB7A9E00019A84 /* ChatViewController.swift in Sources */,
+				3D35DBED25CB79DD00019A84 /* Repository.swift in Sources */,
+				3D35DBE325CB79CD00019A84 /* API.swift in Sources */,
 				3D35DB6D25CB688E00019A84 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
