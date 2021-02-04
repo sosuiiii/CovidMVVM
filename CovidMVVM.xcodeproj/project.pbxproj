@@ -38,6 +38,11 @@
 		3D35DC3925CB7B2400019A84 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */; };
 		3D35DC3E25CB7B3200019A84 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */; };
 		3D35DC4325CB7B3A00019A84 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */; };
+		3D35DC4E25CB7E7500019A84 /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC4D25CB7E7500019A84 /* TopViewController.storyboard */; };
+		3D35DC5325CB7E8800019A84 /* HealthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC5225CB7E8800019A84 /* HealthViewController.storyboard */; };
+		3D35DC5825CB7E9200019A84 /* ChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC5725CB7E9200019A84 /* ChartViewController.storyboard */; };
+		3D35DC5D25CB7EA600019A84 /* CircleChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC5C25CB7EA600019A84 /* CircleChartViewController.storyboard */; };
+		3D35DC6225CB7EB000019A84 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC6125CB7EB000019A84 /* ChatViewController.storyboard */; };
 		5F148E1A7747290779467EE9 /* Pods_CovidMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */; };
 		948E294878831F043BB01757 /* Pods_CovidMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +104,11 @@
 		3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		3D35DC4D25CB7E7500019A84 /* TopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopViewController.storyboard; sourceTree = "<group>"; };
+		3D35DC5225CB7E8800019A84 /* HealthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HealthViewController.storyboard; sourceTree = "<group>"; };
+		3D35DC5725CB7E9200019A84 /* ChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartViewController.storyboard; sourceTree = "<group>"; };
+		3D35DC5C25CB7EA600019A84 /* CircleChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleChartViewController.storyboard; sourceTree = "<group>"; };
+		3D35DC6125CB7EB000019A84 /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
 		79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D437B7CA6A96DCFC165004A /* Pods-CovidMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,10 +235,15 @@
 			isa = PBXGroup;
 			children = (
 				3D35DB6E25CB688E00019A84 /* TopViewController.swift */,
+				3D35DC4D25CB7E7500019A84 /* TopViewController.storyboard */,
 				3D35DBF925CB7A8600019A84 /* HealthViewController.swift */,
+				3D35DC5225CB7E8800019A84 /* HealthViewController.storyboard */,
 				3D35DC0125CB7A8D00019A84 /* ChartViewController.swift */,
+				3D35DC5725CB7E9200019A84 /* ChartViewController.storyboard */,
 				3D35DC0625CB7A9800019A84 /* CircleChartViewController.swift */,
+				3D35DC5C25CB7EA600019A84 /* CircleChartViewController.storyboard */,
 				3D35DC0B25CB7A9E00019A84 /* ChatViewController.swift */,
+				3D35DC6125CB7EB000019A84 /* ChatViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,9 +389,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D35DC5825CB7E9200019A84 /* ChartViewController.storyboard in Resources */,
 				3D35DB7725CB688F00019A84 /* LaunchScreen.storyboard in Resources */,
+				3D35DC4E25CB7E7500019A84 /* TopViewController.storyboard in Resources */,
+				3D35DC6225CB7EB000019A84 /* ChatViewController.storyboard in Resources */,
+				3D35DC5D25CB7EA600019A84 /* CircleChartViewController.storyboard in Resources */,
 				3D35DB7425CB688F00019A84 /* Assets.xcassets in Resources */,
 				3D35DB7225CB688E00019A84 /* Main.storyboard in Resources */,
+				3D35DC5325CB7E8800019A84 /* HealthViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
