@@ -34,15 +34,15 @@ class TopViewModel: TopViewModelInput, TopViewModelOutPut {
     
     init() {
         
+        let ac = Flux.shared.covidActionCreator
+        let store = Flux.shared.covidStore
+        
         let _apiProgress = BehaviorRelay<Bool>(value: false)
         self.apiProgress = _apiProgress.asObservable()
         
         let _error = PublishRelay<Error>()
         self.error = _error.asObservable()
         
-        
-        let ac = Flux.shared.covidActionCreator
-        let store = Flux.shared.covidStore
         
         let _ = store.error.subscribe(onNext: { element in
             _apiProgress.accept(false)

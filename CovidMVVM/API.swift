@@ -14,7 +14,7 @@ enum CovidAPI {
 extension CovidAPI: TargetType {
     
     var baseURL: URL {
-        return URL(string: APIConst.BASE_URL)!
+        return URL(string: APIConst.COVID_BASE_URL)!
     }
     var path: String {
         switch self {

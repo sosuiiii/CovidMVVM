@@ -29,14 +29,31 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = true
-        let label = UILabel()
-        label.text = "aa"
-        label.tintColor = .black
-        label.textColor = .black
-        label.frame = CGRect(x: 20, y: 20, width: 200, height: 50)
-        view.addSubview(label)
         
+        
+        //MARK: Inputs
         let _ = viewModel.inputs.fetchCovidTotal.onNext(Void())
+        
+        
+        //MARK: Outputs
+        let _ = viewModel.outputs.apiProgress
+            .subscribe(onNext: { bool in
+                if bool {
+                    HUD.show(.progress)
+                } else {
+                    HUD.hide()
+                }
+            }).disposed(by: disposeBag)
+        
+        let _ = viewModel.outputs.error
+            .subscribe(onNext: { _ in
+                let alert = UIAlertController(title: "通信エラー", message: "データの取得に失敗しました\n再起動するか、しばらく時間をおいて\n再起動してください。", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                    self.dismiss(animated: true, completion: nil)
+                })
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            })
     }
 
 

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIAlertController {
+    func aaa() {
+        
+    }
+}

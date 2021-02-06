@@ -32,6 +32,7 @@ final class CovidActionCreator {
             .flatMapLatest({ try CovidRepository.getTotal()
             .materialize() })
             .subscribe(onNext: { event in
+                print("fetchTotal::\(event)")
                 switch event {
                 case .next(let value):
                     dispatcher.fetchCovidTotal.accept(value)
