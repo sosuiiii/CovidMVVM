@@ -70,10 +70,12 @@ class TopViewModel: TopViewModelInput, TopViewModelOutPut {
             ac.fetchCovidTotal.onNext(Void())
         }
         self.fetchCovidPrefecture = AnyObserver<Void>() { _ in
+            _apiProgress.accept(true)
             ac.fetchCovidPrefecture.onNext(Void())
         }
         let _ = store.covidPrefectureResponse.subscribe(onNext: { element in
             guard let element = element else {return}
+            _apiProgress.accept(false)
             CovidSingleton.shared.prefecture = element
         }).disposed(by: disposeBag)
         
