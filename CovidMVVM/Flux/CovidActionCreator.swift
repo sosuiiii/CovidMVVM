@@ -31,20 +31,20 @@ final class CovidActionCreator {
         let _ = _fetchCovidTotal
             .flatMapLatest({ try CovidRepository.getTotal()
             .materialize() })
-        .subscribe(onNext: { event in
-            switch event {
-            case .next(let value):
-                dispatcher.fetchCovidTotal.accept(value)
-            case .error(let error):
-                dispatcher.error.accept(error)
-            case .completed:
-                break
-            }
-        }).disposed(by: disposeBag)
+            .subscribe(onNext: { event in
+                switch event {
+                case .next(let value):
+                    dispatcher.fetchCovidTotal.accept(value)
+                case .error(let error):
+                    dispatcher.error.accept(error)
+                case .completed:
+                    break
+                }
+            }).disposed(by: disposeBag)
         
         let _ = _fetchCovidPrefecture
             .flatMapLatest({ try CovidRepository.getPrefecture()
-                .materialize() })
+            .materialize() })
             .subscribe(onNext: { event in
                 switch event {
                 case .next(let value):
@@ -54,6 +54,6 @@ final class CovidActionCreator {
                 case .completed:
                     break
                 }
-            })
+            }).disposed(by: disposeBag)
     }
 }
