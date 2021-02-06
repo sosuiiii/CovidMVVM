@@ -60,6 +60,7 @@ class TopViewModel: TopViewModelInput, TopViewModelOutPut {
         }).disposed(by: disposeBag)
         
         let _ = store.covidTotalResponse.subscribe(onNext: { element in
+            guard let element = element else {return}
             _apiProgress.accept(false)
             _covidTotalResponse.accept(element)
         }).disposed(by: disposeBag)
