@@ -40,6 +40,11 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
     let discharge = UILabel() //退院
     let dischargeNum = UILabel()
     
+    var reloadButton = UIButton(type: .system)
+    let chatButton = UIButton(type: .system)
+    let goHealthVCButton = UIButton(type: .system)
+    let goChartVCButton = UIButton(type: .system)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,20 +93,38 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
                     self.dischargeNum.text = "\(element.discharge)"
                 }
             }).disposed(by: disposeBag)
-    }
-    
-    @objc func reloadAction() {
-        loadView()
-        viewDidLoad()
-    }
-    @objc func chatAction() {
-        performSegue(withIdentifier: "goChat", sender: nil)
-    }
-    @objc func goHealthCheck() {
-        performSegue(withIdentifier: "goHealthCheck", sender: nil)
-    }
-    @objc func goChart() {
-        performSegue(withIdentifier: "goChart", sender: nil)
+        
+        
+        //MARK: other
+        let _ = reloadButton.rx.tap
+            .withLatestFrom(reloadButton.rx.tap)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.loadView()
+                self.viewDidLoad()
+            }).disposed(by: disposeBag)
+        
+        let _ = chatButton.rx.tap
+            .withLatestFrom(chatButton.rx.tap)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.performSegue(withIdentifier: "goChat", sender: nil)
+            }).disposed(by: disposeBag)
+        
+        let _ = goHealthVCButton.rx.controlEvent(.touchUpInside)
+            .withLatestFrom(goHealthVCButton.rx.tap)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.performSegue(withIdentifier: "goHealthCheck", sender: nil)
+            }).disposed(by: disposeBag)
+        
+        let _ = goChartVCButton.rx.controlEvent(.touchUpInside)
+            .withLatestFrom(goChartVCButton.rx.tap)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.performSegue(withIdentifier: "goChart", sender: nil)
+            }).disposed(by: disposeBag)
+        
     }
 }
 
@@ -172,12 +195,10 @@ extension TopViewController {
         createLabelTitle("退院者数", size: size, centerX: rightX , y: 220, font: labelFont, color: color)
         
         let height = view.frame.size.height / 2
-        createButton("健康管理", size: size, y: height + 190, color: Colors.blue, parentView: view).addTarget(self, action: #selector(goHealthCheck), for: .touchDown)
-        createButton("県別状況", size: size, y: height + 240, color: Colors.blue, parentView: view)
-            .addTarget(self, action: #selector(goChart), for: .touchDown)
-        
-        createImageButton("chat", x: view.frame.size.width - 50).addTarget(self, action: #selector(chatAction), for: .touchDown)
-        createImageButton("reload", x: 10).addTarget(self, action: #selector(reloadAction), for: .touchDown)
+        createButton(goHealthVCButton, "健康管理", size: size, y: height + 190, color: Colors.blue)
+        createButton(goChartVCButton, "県別状況", size: size, y: height + 240, color: Colors.blue)
+        createImageButton(chatButton, "chat", x: view.frame.size.width - 50)
+        createImageButton(reloadButton, "reload", x: 10)
         
         let imageView = UIImageView()
         let image = UIImage(named: "virus")
@@ -201,8 +222,7 @@ extension TopViewController {
         centerView.addSubview(label)
     }
     //下部ボタン
-    func createButton(_ title: String, size: CGSize, y: CGFloat, color: UIColor, parentView: UIView) -> UIButton{
-        let button = UIButton(type: .system)
+    func createButton(_ button: UIButton, _ title: String, size: CGSize, y: CGFloat, color: UIColor) {
         button.setTitle(title, for: .normal)
         button.frame.size = size
         button.center.x = view.center.x
@@ -210,17 +230,14 @@ extension TopViewController {
         button.setAttributedTitle(attributedTitle, for: .normal)
         button.frame.origin.y = y
         button.setTitleColor(color, for: .normal)
-        parentView.addSubview(button)
-        return button
+        view.addSubview(button)
     }
     //上部ボタン
-    func createImageButton(_ name: String, x: CGFloat) -> UIButton {
-        let button = UIButton(type: .system)
+    func createImageButton(_ button: UIButton, _ name: String, x: CGFloat) {
         button.setImage(UIImage(named: name), for: .normal)
         button.frame.size = CGSize(width: 30, height: 30)
         button.tintColor = .white
         button.frame.origin = CGPoint(x: x, y: 25)
         view.addSubview(button)
-        return button
     }
 }
