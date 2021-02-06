@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class ActionCreator {
+final class CovidActionCreator {
 
     let fetchCovidTotal: AnyObserver<Void>
     let fetchCovidPrefecture: AnyObserver<Void>
