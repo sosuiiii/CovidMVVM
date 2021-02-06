@@ -43,5 +43,9 @@ final class CovidStore {
         let _ = dispatcher.fetchCovidPrefecture
             .bind(to: _covidPrefectureResponse)
             .disposed(by: disposeBag)
+        
+        let _ = dispatcher.error
+            .bind(to: _error)
+            .disposed(by: disposeBag)
     }
 }
