@@ -96,7 +96,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
         
         
         //MARK: other
-        let _ = reloadButton.rx.tap
+        let _ = reloadButton.rx.controlEvent(.touchUpInside)
             .withLatestFrom(reloadButton.rx.tap)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
@@ -104,7 +104,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
                 self.viewDidLoad()
             }).disposed(by: disposeBag)
         
-        let _ = chatButton.rx.tap
+        let _ = chatButton.rx.controlEvent(.touchUpInside)
             .withLatestFrom(chatButton.rx.tap)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
@@ -115,7 +115,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
             .withLatestFrom(goHealthVCButton.rx.tap)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
-                self.performSegue(withIdentifier: "goHealthCheck", sender: nil)
+                self.goHealthVC()
             }).disposed(by: disposeBag)
         
         let _ = goChartVCButton.rx.controlEvent(.touchUpInside)

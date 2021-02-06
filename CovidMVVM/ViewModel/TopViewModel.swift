@@ -64,7 +64,7 @@ class TopViewModel: TopViewModelInput, TopViewModelOutPut {
             _covidTotalResponse.accept(element)
         }).disposed(by: disposeBag)
         
-        //MARK: Inputs
+        //MARK: Inputs, API
         self.fetchCovidTotal = AnyObserver<Void>() { _ in
             _apiProgress.accept(true)
             ac.fetchCovidTotal.onNext(Void())

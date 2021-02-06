@@ -21,14 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         self.window = window
         window.makeKeyAndVisible()
-        // Storyboard の場合
         let vm = TopViewModel()
         let dependency = TopViewController.Dependency(viewModel: vm)
         let vc = TopViewController.instantiate(with: dependency)
         let navi = UINavigationController(rootViewController: vc)
         navi.modalPresentationStyle = .fullScreen
-        // Viewをコードで書いている場合
-        // let vc = SecondViewController()
         window.rootViewController = navi
     }
 
