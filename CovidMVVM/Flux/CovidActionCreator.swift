@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class ActionCreator {
+final class CovidActionCreator {
 
     let fetchCovidTotal: AnyObserver<Void>
     let fetchCovidPrefecture: AnyObserver<Void>
@@ -31,21 +31,23 @@ final class ActionCreator {
         let _ = _fetchCovidTotal
             .flatMapLatest({ try CovidRepository.getTotal()
             .materialize() })
-        .subscribe(onNext: { event in
-            switch event {
-            case .next(let value):
-                dispatcher.fetchCovidTotal.accept(value)
-            case .error(let error):
-                dispatcher.error.accept(error)
-            case .completed:
-                break
-            }
-        }).disposed(by: disposeBag)
+            .subscribe(onNext: { event in
+                print("fetchTotal::\(event)")
+                switch event {
+                case .next(let value):
+                    dispatcher.fetchCovidTotal.accept(value)
+                case .error(let error):
+                    dispatcher.error.accept(error)
+                case .completed:
+                    break
+                }
+            }).disposed(by: disposeBag)
         
         let _ = _fetchCovidPrefecture
             .flatMapLatest({ try CovidRepository.getPrefecture()
-                .materialize() })
+            .materialize() })
             .subscribe(onNext: { event in
+                print("fetchPrefectures::\(event)")
                 switch event {
                 case .next(let value):
                     dispatcher.fetchCovidPrefecture.accept(value)
@@ -54,6 +56,6 @@ final class ActionCreator {
                 case .completed:
                     break
                 }
-            })
+            }).disposed(by: disposeBag)
     }
 }

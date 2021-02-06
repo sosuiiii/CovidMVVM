@@ -11,7 +11,6 @@
 		3D35DB6B25CB688E00019A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6A25CB688E00019A84 /* AppDelegate.swift */; };
 		3D35DB6D25CB688E00019A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */; };
 		3D35DB6F25CB688E00019A84 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6E25CB688E00019A84 /* TopViewController.swift */; };
-		3D35DB7225CB688E00019A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DB7025CB688E00019A84 /* Main.storyboard */; };
 		3D35DB7425CB688F00019A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DB7325CB688F00019A84 /* Assets.xcassets */; };
 		3D35DB7725CB688F00019A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DB7525CB688F00019A84 /* LaunchScreen.storyboard */; };
 		3D35DB8225CB689000019A84 /* CovidMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB8125CB689000019A84 /* CovidMVVMTests.swift */; };
@@ -28,7 +27,7 @@
 		3D35DC0725CB7A9800019A84 /* CircleChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC0625CB7A9800019A84 /* CircleChartViewController.swift */; };
 		3D35DC0C25CB7A9E00019A84 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC0B25CB7A9E00019A84 /* ChatViewController.swift */; };
 		3D35DC1125CB7ABD00019A84 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1025CB7ABD00019A84 /* TopViewModel.swift */; };
-		3D35DC1625CB7AC800019A84 /* HealthCheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1525CB7AC800019A84 /* HealthCheckViewModel.swift */; };
+		3D35DC1625CB7AC800019A84 /* HealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1525CB7AC800019A84 /* HealthViewModel.swift */; };
 		3D35DC1B25CB7ACF00019A84 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1A25CB7ACF00019A84 /* ChartViewModel.swift */; };
 		3D35DC2025CB7AD900019A84 /* CircleChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC1F25CB7AD900019A84 /* CircleChartViewModel.swift */; };
 		3D35DC2525CB7AE700019A84 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC2425CB7AE700019A84 /* ChatViewModel.swift */; };
@@ -43,6 +42,8 @@
 		3D35DC5825CB7E9200019A84 /* ChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC5725CB7E9200019A84 /* ChartViewController.storyboard */; };
 		3D35DC5D25CB7EA600019A84 /* CircleChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC5C25CB7EA600019A84 /* CircleChartViewController.storyboard */; };
 		3D35DC6225CB7EB000019A84 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC6125CB7EB000019A84 /* ChatViewController.storyboard */; };
+		3DC60FD525CE68BD00EA3EC0 /* Flux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC60FD425CE68BD00EA3EC0 /* Flux.swift */; };
+		3DC6101925CEB56E00EA3EC0 /* HealthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6101825CEB56E00EA3EC0 /* HealthModel.swift */; };
 		5F148E1A7747290779467EE9 /* Pods_CovidMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */; };
 		948E294878831F043BB01757 /* Pods_CovidMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,7 +73,6 @@
 		3D35DB6A25CB688E00019A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D35DB6E25CB688E00019A84 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		3D35DB7125CB688E00019A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D35DB7325CB688F00019A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D35DB7625CB688F00019A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D35DB7825CB688F00019A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		3D35DC0625CB7A9800019A84 /* CircleChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChartViewController.swift; sourceTree = "<group>"; };
 		3D35DC0B25CB7A9E00019A84 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3D35DC1025CB7ABD00019A84 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
-		3D35DC1525CB7AC800019A84 /* HealthCheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCheckViewModel.swift; sourceTree = "<group>"; };
+		3D35DC1525CB7AC800019A84 /* HealthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewModel.swift; sourceTree = "<group>"; };
 		3D35DC1A25CB7ACF00019A84 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		3D35DC1F25CB7AD900019A84 /* CircleChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChartViewModel.swift; sourceTree = "<group>"; };
 		3D35DC2425CB7AE700019A84 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -109,6 +109,8 @@
 		3D35DC5725CB7E9200019A84 /* ChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartViewController.storyboard; sourceTree = "<group>"; };
 		3D35DC5C25CB7EA600019A84 /* CircleChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleChartViewController.storyboard; sourceTree = "<group>"; };
 		3D35DC6125CB7EB000019A84 /* ChatViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatViewController.storyboard; sourceTree = "<group>"; };
+		3DC60FD425CE68BD00EA3EC0 /* Flux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flux.swift; sourceTree = "<group>"; };
+		3DC6101825CEB56E00EA3EC0 /* HealthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthModel.swift; sourceTree = "<group>"; };
 		79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D437B7CA6A96DCFC165004A /* Pods-CovidMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,14 +174,11 @@
 			children = (
 				3D35DB6A25CB688E00019A84 /* AppDelegate.swift */,
 				3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */,
-				3D35DB7025CB688E00019A84 /* Main.storyboard */,
 				3D35DBF525CB7A4400019A84 /* Flux */,
 				3D35DBF425CB7A3900019A84 /* View */,
 				3D35DBF225CB7A2800019A84 /* ViewModel */,
+				3DC6101725CEB55A00EA3EC0 /* Model */,
 				3D35DBF125CB79F800019A84 /* Extension */,
-				3D35DB7325CB688F00019A84 /* Assets.xcassets */,
-				3D35DB7525CB688F00019A84 /* LaunchScreen.storyboard */,
-				3D35DB7825CB688F00019A84 /* Info.plist */,
 				3D35DBCE25CB799300019A84 /* Colors.swift */,
 				3D35DBD325CB79A100019A84 /* Singleton.swift */,
 				3D35DBD825CB79BA00019A84 /* FirestoreData.swift */,
@@ -187,6 +186,9 @@
 				3D35DBE225CB79CD00019A84 /* API.swift */,
 				3D35DBE725CB79D500019A84 /* Entity.swift */,
 				3D35DBEC25CB79DD00019A84 /* Repository.swift */,
+				3D35DB7325CB688F00019A84 /* Assets.xcassets */,
+				3D35DB7525CB688F00019A84 /* LaunchScreen.storyboard */,
+				3D35DB7825CB688F00019A84 /* Info.plist */,
 			);
 			path = CovidMVVM;
 			sourceTree = "<group>";
@@ -223,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				3D35DC1025CB7ABD00019A84 /* TopViewModel.swift */,
-				3D35DC1525CB7AC800019A84 /* HealthCheckViewModel.swift */,
+				3D35DC1525CB7AC800019A84 /* HealthViewModel.swift */,
 				3D35DC1A25CB7ACF00019A84 /* ChartViewModel.swift */,
 				3D35DC1F25CB7AD900019A84 /* CircleChartViewModel.swift */,
 				3D35DC2425CB7AE700019A84 /* ChatViewModel.swift */,
@@ -251,11 +253,20 @@
 		3D35DBF525CB7A4400019A84 /* Flux */ = {
 			isa = PBXGroup;
 			children = (
+				3DC60FD425CE68BD00EA3EC0 /* Flux.swift */,
 				3D35DC2925CB7AFA00019A84 /* CovidStore.swift */,
 				3D35DC2E25CB7B0100019A84 /* CovidDispatcher.swift */,
 				3D35DC3325CB7B0A00019A84 /* CovidActionCreator.swift */,
 			);
 			path = Flux;
+			sourceTree = "<group>";
+		};
+		3DC6101725CEB55A00EA3EC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DC6101825CEB56E00EA3EC0 /* HealthModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5A410DC3E94F3327B8CD99A7 /* Pods */ = {
@@ -395,7 +406,6 @@
 				3D35DC6225CB7EB000019A84 /* ChatViewController.storyboard in Resources */,
 				3D35DC5D25CB7EA600019A84 /* CircleChartViewController.storyboard in Resources */,
 				3D35DB7425CB688F00019A84 /* Assets.xcassets in Resources */,
-				3D35DB7225CB688E00019A84 /* Main.storyboard in Resources */,
 				3D35DC5325CB7E8800019A84 /* HealthViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +538,7 @@
 				3D35DC1B25CB7ACF00019A84 /* ChartViewModel.swift in Sources */,
 				3D35DB6F25CB688E00019A84 /* TopViewController.swift in Sources */,
 				3D35DC0725CB7A9800019A84 /* CircleChartViewController.swift in Sources */,
+				3DC60FD525CE68BD00EA3EC0 /* Flux.swift in Sources */,
 				3D35DBD925CB79BA00019A84 /* FirestoreData.swift in Sources */,
 				3D35DBCF25CB799300019A84 /* Colors.swift in Sources */,
 				3D35DC2F25CB7B0100019A84 /* CovidDispatcher.swift in Sources */,
@@ -535,7 +546,7 @@
 				3D35DC2A25CB7AFA00019A84 /* CovidStore.swift in Sources */,
 				3D35DBDE25CB79C800019A84 /* APIConst.swift in Sources */,
 				3D35DC4325CB7B3A00019A84 /* AlertExtension.swift in Sources */,
-				3D35DC1625CB7AC800019A84 /* HealthCheckViewModel.swift in Sources */,
+				3D35DC1625CB7AC800019A84 /* HealthViewModel.swift in Sources */,
 				3D35DB6B25CB688E00019A84 /* AppDelegate.swift in Sources */,
 				3D35DC0225CB7A8D00019A84 /* ChartViewController.swift in Sources */,
 				3D35DC1125CB7ABD00019A84 /* TopViewModel.swift in Sources */,
@@ -545,6 +556,7 @@
 				3D35DBFA25CB7A8600019A84 /* HealthViewController.swift in Sources */,
 				3D35DC3925CB7B2400019A84 /* UIColor+Extension.swift in Sources */,
 				3D35DC2025CB7AD900019A84 /* CircleChartViewModel.swift in Sources */,
+				3DC6101925CEB56E00EA3EC0 /* HealthModel.swift in Sources */,
 				3D35DC0C25CB7A9E00019A84 /* ChatViewController.swift in Sources */,
 				3D35DBED25CB79DD00019A84 /* Repository.swift in Sources */,
 				3D35DBE325CB79CD00019A84 /* API.swift in Sources */,
@@ -584,14 +596,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D35DB7025CB688E00019A84 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D35DB7125CB688E00019A84 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3D35DB7525CB688F00019A84 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
