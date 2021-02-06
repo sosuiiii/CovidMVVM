@@ -60,7 +60,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
         
         //MARK: Inputs
         let _ = viewModel.inputs.fetchCovidTotal.onNext(Void())
-        
+        let _ = viewModel.inputs.fetchCovidPrefecture.onNext(Void())
         
         //MARK: Outputs
         let _ = viewModel.outputs.apiProgress
