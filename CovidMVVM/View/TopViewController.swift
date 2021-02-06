@@ -46,14 +46,18 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
             }).disposed(by: disposeBag)
         
         let _ = viewModel.outputs.error
-            .subscribe(onNext: { _ in
-                let alert = UIAlertController(title: "通信エラー", message: "データの取得に失敗しました\n再起動するか、しばらく時間をおいて\n再起動してください。", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.present(AlertUtil.showErrorAlert(completion: {
                     self.dismiss(animated: true, completion: nil)
-                })
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
-            })
+                }), animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+        
+        let _ = viewModel.outputs.covidTotalResponse
+            .subscribe(onNext: { [weak self] element in
+                guard let self = self else {return}
+                guard let element = element else {return}
+            }).disposed(by: disposeBag)
     }
 
 

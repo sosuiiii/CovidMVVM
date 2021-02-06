@@ -47,6 +47,7 @@ final class CovidActionCreator {
             .flatMapLatest({ try CovidRepository.getPrefecture()
             .materialize() })
             .subscribe(onNext: { event in
+                print("fetchPrefectures::\(event)")
                 switch event {
                 case .next(let value):
                     dispatcher.fetchCovidPrefecture.accept(value)
