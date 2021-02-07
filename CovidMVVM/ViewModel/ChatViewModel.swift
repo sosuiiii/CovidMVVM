@@ -18,6 +18,7 @@ protocol ChatViewModelInput {
 
 protocol ChatViewModelOutPut {
     var firestoreData: Observable<[FirestoreData]>{get}
+    var data: [FirestoreData] {get}
 }
 
 protocol ChatViewModelType {
@@ -30,8 +31,12 @@ class ChatViewModel: ChatViewModelInput, ChatViewModelOutPut {
     //MARK: Input
     var sendFirestore: AnyObserver<FirestoreData>
     var setFirestoreData: AnyObserver<Void>
+    
     //MARK: Output
     var firestoreData: Observable<[FirestoreData]>
+    
+    //MARK: other
+    var data: [FirestoreData] = []
     
     init() {
         
@@ -73,6 +78,10 @@ class ChatViewModel: ChatViewModelInput, ChatViewModelOutPut {
                 }
             })
         }
+        
+        let _ = _firestoreData.subscribe(onNext: { data in
+            self.data = data
+        })
         
     }
 }

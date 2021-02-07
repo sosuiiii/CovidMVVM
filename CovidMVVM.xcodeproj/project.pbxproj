@@ -34,7 +34,6 @@
 		3D35DC2A25CB7AFA00019A84 /* CovidStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC2925CB7AFA00019A84 /* CovidStore.swift */; };
 		3D35DC2F25CB7B0100019A84 /* CovidDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC2E25CB7B0100019A84 /* CovidDispatcher.swift */; };
 		3D35DC3425CB7B0A00019A84 /* CovidActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3325CB7B0A00019A84 /* CovidActionCreator.swift */; };
-		3D35DC3925CB7B2400019A84 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */; };
 		3D35DC3E25CB7B3200019A84 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */; };
 		3D35DC4325CB7B3A00019A84 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */; };
 		3D35DC4E25CB7E7500019A84 /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D35DC4D25CB7E7500019A84 /* TopViewController.storyboard */; };
@@ -101,7 +100,6 @@
 		3D35DC2925CB7AFA00019A84 /* CovidStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStore.swift; sourceTree = "<group>"; };
 		3D35DC2E25CB7B0100019A84 /* CovidDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDispatcher.swift; sourceTree = "<group>"; };
 		3D35DC3325CB7B0A00019A84 /* CovidActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidActionCreator.swift; sourceTree = "<group>"; };
-		3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		3D35DC4D25CB7E7500019A84 /* TopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopViewController.storyboard; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 		3D35DBF125CB79F800019A84 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3D35DC3825CB7B2400019A84 /* UIColor+Extension.swift */,
 				3D35DC3D25CB7B3200019A84 /* UIViewController+Extension.swift */,
 				3D35DC4225CB7B3A00019A84 /* AlertExtension.swift */,
 			);
@@ -563,7 +560,6 @@
 				3D35DC2525CB7AE700019A84 /* ChatViewModel.swift in Sources */,
 				3D35DBD425CB79A100019A84 /* Singleton.swift in Sources */,
 				3D35DBFA25CB7A8600019A84 /* HealthViewController.swift in Sources */,
-				3D35DC3925CB7B2400019A84 /* UIColor+Extension.swift in Sources */,
 				3D35DC2025CB7AD900019A84 /* CircleChartViewModel.swift in Sources */,
 				3D35DC0C25CB7A9E00019A84 /* ChatViewController.swift in Sources */,
 				3D35DBED25CB79DD00019A84 /* Repository.swift in Sources */,

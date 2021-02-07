@@ -24,8 +24,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessageCel
     }
     var viewModel: ChatViewModelType!
     
-    private var userId = ""
-    private var firestoreData:[FirestoreData] = []
+    private var userId = UIDevice.current.identifierForVendor?.uuidString
     private var messages: [Message] = []
     
     override func viewDidLoad() {
@@ -33,9 +32,8 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessageCel
         
         //MARK: Output
         let _ = viewModel.outputs.firestoreData
-            .subscribe(onNext: { [weak self] data in
+            .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
-                self.firestoreData.append(contentsOf: data)
                 DispatchQueue.main.async {
                     self.messages = self.getMessages()
                     self.messagesCollectionView.reloadData()
@@ -45,12 +43,9 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessageCel
         
         //MARK: Input
         viewModel.inputs.setFirestoreData.onNext(Void())
-        setView()
         
-        if let uuid = UIDevice.current.identifierForVendor?.uuidString {
-            userId = uuid
-            print(userId)
-        }
+        
+        setView()
         self.navigationController?.navigationBar.isHidden = true
     }
     @objc func backButtonAction() {
@@ -59,7 +54,7 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessageCel
     
     //MARK: MessagesViewController
     func currentSender() -> SenderType {
-        return Sender(senderId: userId, displayName: "MyName")
+        return Sender(senderId: userId!, displayName: "MyName")
     }
     func otherSender() -> SenderType {
         return Sender(senderId: "-1", displayName: "OtherName")
@@ -68,17 +63,15 @@ class ChatViewController: MessagesViewController, MessagesDataSource, MessageCel
         return messages[indexPath.section]
     }
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        print(messages.count)
         return messages.count
     }
     //messagesにメッセージを代入するためにデータを整頓している
     func getMessages() -> [Message] {
         var messageArray:[Message] = []
-        for i in 0..<firestoreData.count {
-            messageArray.append(createMessage(text: firestoreData[i].text!, date: firestoreData[i].date!, firestoreData[i].senderId!))
+        for i in 0..<viewModel.outputs.data.count {
+            messageArray.append(createMessage(text: viewModel.outputs.data[i].text!, date: viewModel.outputs.data[i].date!, viewModel.outputs.data[i].senderId!))
         }
-        messageArray.sort(by: {
-            a, b -> Bool in
+        messageArray.sort(by: { a, b -> Bool in
             return a.sentDate < b.sentDate
         })
         return messageArray
