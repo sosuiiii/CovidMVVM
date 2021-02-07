@@ -18,4 +18,22 @@ open class AlertUtil {
         alert.addAction(action)
         return alert
     }
+    //共通化できていないのであまり意味ない
+    static func showHealthCheckResult(vc: UIViewController, title: String, message: String, today: String) {
+        let alert = UIAlertController(title: "診断を完了しますか？", message: "診断は1日に1回までです", preferredStyle: .actionSheet)
+        let yesAction = UIAlertAction(title: "完了", style: .default, handler: { _ in
+            let alert = UIAlertController(title: "感染している可能性「\(title)」", message: message, preferredStyle: .alert)
+            vc.present(alert, animated: true, completion: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    vc.dismiss(animated: true, completion: nil)
+                })
+            })
+            //診断結果をローカルに保存
+            UserDefaults.standard.set(title, forKey: today)
+        })
+        let noAction = UIAlertAction(title: "キャンセル", style: .destructive, handler: nil)
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        vc.present(alert, animated: true, completion: nil)
+    }
 }
