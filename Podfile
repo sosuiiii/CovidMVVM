@@ -4,7 +4,8 @@ platform :ios, '12.0'
 target 'CovidMVVM' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+# add pods for desired Firebase products
+# https://firebase.google.com/docs/ios/setup#available-pods
   # Pods for CovidMVVM
   pod 'FSCalendar'
   pod 'CalculateCalendarLogic'
