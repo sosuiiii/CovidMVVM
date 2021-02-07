@@ -31,7 +31,7 @@ class ChartViewController: UIViewController, StoryboardInstantiatable {
     var deaths = UILabel()
     var deathsCount = UILabel()
     var segment = UISegmentedControl()
-    var chartView:HorizontalBarChartView!
+    var chartView: HorizontalBarChartView!
     var searchBar = UISearchBar()
     var disposeBag = DisposeBag()
 
@@ -63,7 +63,7 @@ class ChartViewController: UIViewController, StoryboardInstantiatable {
         dismiss(animated: true, completion: nil)
     }
     @objc func goCircle() {
-        performSegue(withIdentifier: "goCircle", sender: nil)
+        goCircleVC()
     }
 }
 

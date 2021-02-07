@@ -47,6 +47,8 @@ class ChartViewModel: ChartViewModelInput, ChartViewModelOutPut {
     
     
     init(data: [CovidInfo.Prefecture]) {
+        
+        //MARK: Initialize
         self.covidPrefecture = data.sorted(by: {a,b in return a.cases > b.cases} )
         
         var entries:[BarChartDataEntry] = []
