@@ -108,7 +108,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
             .withLatestFrom(chatButton.rx.tap)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
-                self.performSegue(withIdentifier: "goChat", sender: nil)
+                self.goChatVC()
             }).disposed(by: disposeBag)
         
         let _ = goHealthVCButton.rx.controlEvent(.touchUpInside)

@@ -11,7 +11,12 @@ import UIKit
 extension UIViewController {
     
     func goChatVC() {
-        
+        let vm = ChatViewModel()
+        let dependency = ChatViewController.Dependency(viewModel: vm)
+        let vc = ChatViewController.instantiate(with: dependency)
+        let navi = UINavigationController(rootViewController: vc)
+//        navi.modalPresentationStyle = .fullScreen
+        self.present(navi, animated: true, completion: nil)
     }
     func goHealthVC() {
         let vm = HealthViewModel()
