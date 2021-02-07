@@ -18,7 +18,7 @@ extension UIViewController {
         let dependency = HealthViewController.Dependeny(viewModel: vm)
         let vc = HealthViewController.instantiate(with: dependency)
         let navi = UINavigationController(rootViewController: vc)
-        navi.modalPresentationStyle = .fullScreen
+//        navi.modalPresentationStyle = .fullScreen
 //        vc.navigationController?.pushViewController(navi, animated: true)
         self.present(navi, animated: true, completion: nil)
     }
