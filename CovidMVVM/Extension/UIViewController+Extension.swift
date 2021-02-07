@@ -19,11 +19,15 @@ extension UIViewController {
         let vc = HealthViewController.instantiate(with: dependency)
         let navi = UINavigationController(rootViewController: vc)
 //        navi.modalPresentationStyle = .fullScreen
-//        vc.navigationController?.pushViewController(navi, animated: true)
         self.present(navi, animated: true, completion: nil)
     }
     func goChart() {
-        
+        let vm = ChartViewModel(data: CovidSingleton.shared.prefecture)
+        let dependency = ChartViewController.Dependency(viewModel: vm)
+        let vc = ChartViewController.instantiate(with: dependency)
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        self.present(navi, animated: true, completion: nil)
     }
     func goCircleVC() {
         

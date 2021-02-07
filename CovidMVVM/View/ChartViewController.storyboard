@@ -11,7 +11,7 @@
         <!--Chart View Controller-->
         <scene sceneID="Emz-SV-v9p">
             <objects>
-                <viewController id="OE0-m6-RYC" customClass="ChartViewController" customModule="CovidMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="OE0-m6-RYC" customClass="ChartViewController" customModule="CovidMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pwj-2W-hXc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--Navigation Controller-->
         <scene sceneID="oAR-jL-kE6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4pb-u9-mlM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="4pb-u9-mlM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hVK-0J-HNr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
