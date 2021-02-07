@@ -11,7 +11,7 @@
         <!--Circle Chart View Controller-->
         <scene sceneID="cST-yL-bKd">
             <objects>
-                <viewController id="Qc8-T8-P64" customClass="CircleChartViewController" customModule="CovidMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="Qc8-T8-P64" customClass="CircleChartViewController" customModule="CovidMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NaX-cR-FrC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

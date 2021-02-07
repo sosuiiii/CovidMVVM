@@ -30,6 +30,11 @@ extension UIViewController {
         self.present(navi, animated: true, completion: nil)
     }
     func goCircleVC() {
-        
+        let vm = CircleChartViewModel(data: CovidSingleton.shared.prefecture)
+        let dependency = CircleChartViewController.Dependency(viewModel: vm)
+        let vc = CircleChartViewController.instantiate(with: dependency)
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        self.present(navi, animated: true, completion: nil)
     }
 }
