@@ -33,12 +33,23 @@ class ChartViewController: UIViewController, StoryboardInstantiatable {
     var segment = UISegmentedControl()
     var chartView:HorizontalBarChartView!
     var searchBar = UISearchBar()
+    var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemGroupedBackground
         self.navigationController?.navigationBar.isHidden = true
+        
+        //MARK: Output
+        let _ = viewModel.outputs.indexValue
+            .subscribe(onNext: { [weak self] index in
+                guard let self = self else {return}
+                self.prefecture.text = "\(self.viewModel.outputs.covidPrefecture[index].nameJa)"
+                self.pcrCount.text = "\(self.viewModel.outputs.covidPrefecture[index].pcr)"
+                self.casesCount.text = "\(self.viewModel.outputs.covidPrefecture[index].cases)"
+                self.deathsCount.text = "\(self.viewModel.outputs.covidPrefecture[index].deaths)"
+            }).disposed(by: disposeBag)
         setView()
         dataSet()
     }
@@ -56,7 +67,6 @@ class ChartViewController: UIViewController, StoryboardInstantiatable {
     }
 }
 
-
 //MARK: UISearchBarDelegate
 extension ChartViewController: UISearchBarDelegate {
 
@@ -64,10 +74,7 @@ extension ChartViewController: UISearchBarDelegate {
         view.endEditing(true)
         if let index = viewModel.outputs.covidPrefecture
             .firstIndex(where: { $0.nameJa == searchBar.text }) {
-            prefecture.text = "\(viewModel.outputs.covidPrefecture[index].nameJa)"
-            pcrCount.text = "\(viewModel.outputs.covidPrefecture[index].pcr)"
-            casesCount.text = "\(viewModel.outputs.covidPrefecture[index].cases)"
-            deathsCount.text = "\(viewModel.outputs.covidPrefecture[index].deaths)"
+            viewModel.inputs.index.onNext(index)
         }
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -81,10 +88,7 @@ extension ChartViewController: ChartViewDelegate {
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         if let dataSet = chartView.data?.dataSets[highlight.dataSetIndex] {
            let index = dataSet.entryIndex(entry: entry)
-            prefecture.text = "\(viewModel.outputs.covidPrefecture[index].nameJa)"
-            pcrCount.text = "\(viewModel.outputs.covidPrefecture[index].pcr)"
-            casesCount.text = "\(viewModel.outputs.covidPrefecture[index].cases)"
-            deathsCount.text = "\(viewModel.outputs.covidPrefecture[index].deaths)"
+            viewModel.inputs.index.onNext(index)
         }
     }
 }
@@ -150,14 +154,9 @@ extension ChartViewController {
         bottomLabel(uiView, deaths, 1.61, 50, text: "死者数", size: 15, weight: .bold, color: Colors.bluePurple)
         bottomLabel(uiView, deathsCount, 1.61, 85, text: "2222", size: 30, weight: .bold, color: Colors.blue)
         
-        
-        
-        for i in 0..<CovidSingleton.shared.prefecture.count {
-            if CovidSingleton.shared.prefecture[i].nameJa == "東京" {
-                prefecture.text = CovidSingleton.shared.prefecture[i].nameJa
-                pcrCount.text = "\(CovidSingleton.shared.prefecture[i].pcr)"
-                casesCount.text = "\(CovidSingleton.shared.prefecture[i].cases)"
-                deathsCount.text = "\(CovidSingleton.shared.prefecture[i].deaths)"
+        for i in 0..<self.viewModel.outputs.covidPrefecture.count {
+            if self.viewModel.outputs.covidPrefecture[i].nameJa == "東京" {
+                viewModel.inputs.index.onNext(i)
                 break
             }
         }

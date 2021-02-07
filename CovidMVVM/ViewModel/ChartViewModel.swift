@@ -12,6 +12,7 @@ import Charts
 
 protocol ChartViewModelInput {
     var patternInput: AnyObserver<Int> {get}
+    var index: AnyObserver<Int> {get}
 }
 
 protocol ChartViewModelOutPut {
@@ -19,6 +20,7 @@ protocol ChartViewModelOutPut {
     var entries: [BarChartDataEntry] {get}
     var names: [String] {get}
     var selectedSegment: Int {get}
+    var indexValue: Observable<Int> {get}
 }
 
 protocol ChartViewModelType {
@@ -30,11 +32,15 @@ class ChartViewModel: ChartViewModelInput, ChartViewModelOutPut {
     
     //MARK: input
     var patternInput: AnyObserver<Int>
+    var index: AnyObserver<Int>
+    
     //MARK: output
     var covidPrefecture: [CovidInfo.Prefecture]
     var entries: [BarChartDataEntry] = []
     var names: [String] = []
     var pattern: Observable<Int>
+    var indexValue: Observable<Int>
+    
     //MARK: other
     var selectedSegment = 0
     private var disposeBag = DisposeBag()
@@ -57,11 +63,19 @@ class ChartViewModel: ChartViewModelInput, ChartViewModelOutPut {
         let _pattern = PublishRelay<Int>()
         self.pattern = _pattern.asObservable()
         
+        let _indexValue = PublishRelay<Int>()
+        self.indexValue = _indexValue.asObservable()
+        
         //MARK: Input
         self.patternInput = AnyObserver<Int>() { value in
             guard let value = value.element else {return}
             _pattern.accept(value)
         }
+        self.index = AnyObserver<Int>() { index in
+            guard let index = index.element else {return}
+            _indexValue.accept(index)
+        }
+        
         //MARK: Output
         //セグメント選択
         let _ = _pattern.subscribe(onNext: { [weak self] value in
