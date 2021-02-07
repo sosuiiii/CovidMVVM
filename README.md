@@ -1,12 +1,14 @@
 # コロナアプリ
 コロナウイルスの国内感染状況を確認できるアプリ
 
-##Kindle出版/ベストセラー獲得
+#Kindle出版/ベストセラー獲得
+
 【Swift5】 つくって学ぼ iOSアプリ開発
 https://t.co/qR6Bsx3Itz?amp=1
 
 
-##使用したライブラリ
+#使用したライブラリ
+
   pod 'FSCalendar'
   pod 'CalculateCalendarLogic'
   pod 'Charts'
@@ -27,10 +29,10 @@ https://t.co/qR6Bsx3Itz?amp=1
   pod 'Instantiate'
   pod 'InstantiateStandard'
   
-##使い方
+#使い方
 >Pod install
 
-##意識したこと
+#意識したこと
 
 
 
