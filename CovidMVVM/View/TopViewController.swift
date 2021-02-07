@@ -122,7 +122,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
             .withLatestFrom(goChartVCButton.rx.tap)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
-                self.performSegue(withIdentifier: "goChart", sender: nil)
+                self.goChart()
             }).disposed(by: disposeBag)
         
     }
