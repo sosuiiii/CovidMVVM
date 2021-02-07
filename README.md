@@ -1,5 +1,7 @@
 # コロナアプリ
 コロナウイルスの国内感染状況を確認できるアプリ  
+<img width="688" alt="スクリーンショット 2021-02-07 17 51 23" src="https://user-images.githubusercontent.com/41160560/107141590-20f1c780-696d-11eb-92e5-e63d24a8b54d.png">
+
 
 ## Kindle出版/ベストセラー獲得
 【Swift5】 つくって学ぼ iOSアプリ開発  
@@ -10,23 +12,27 @@ https://t.co/qR6Bsx3Itz?amp=1
 pod 'FSCalendar'  
 pod 'CalculateCalendarLogic'  
 pod 'Charts'  
-pod 'Firebase/Analytics'  
-pod 'Firebase/Auth'  
-pod 'Firebase/Core'  
 pod 'Firebase/Firestore'  
 pod 'FirebaseFirestoreSwift'  
 pod 'MessageKit'  
 pod 'MessageInputBar'  
 pod 'PKHUD'  
-pod 'SwiftyJSON'  
 pod 'Moya/RxSwift', '~> 14.0'  
 pod 'RxSwift'  
-pod 'RxDataSources'  
 pod 'RxCocoa'  
-pod 'RealmSwift'  
 pod 'Instantiate'  
 pod 'InstantiateStandard'  
-  
+
+### 入れたけど使用しなかったライブラリ
+pod 'RxDataSources'  
+pod 'SwiftyJSON'  
+pod 'RealmSwift'  
+pod 'Firebase/Analytics'  
+pod 'Firebase/Auth'  
+pod 'Firebase/Core'  
+シンプルに必要なかった。RealmSwiftもシングルトンで代用すれば良い。
+
+
 ## 使い方
 >Pod install  
 
@@ -64,7 +70,3 @@ outputを監視した。
 ## これからすること
 ・リリース  
 ・CI/CD構築  
-
-
-## アプリスクショ
-<img width="688" alt="スクリーンショット 2021-02-07 17 51 23" src="https://user-images.githubusercontent.com/41160560/107141590-20f1c780-696d-11eb-92e5-e63d24a8b54d.png">
