@@ -32,7 +32,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'  
 シンプルに必要なかった。RealmSwiftもシングルトンで代用すれば良い。
 
-##CI
+## CI
 Bitrize  
 pushしたらプルリク自動生成。マージは手動
 
