@@ -32,6 +32,9 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'  
 シンプルに必要なかった。RealmSwiftもシングルトンで代用すれば良い。
 
+##CI
+Bitrize  
+pushしたらプルリク自動生成。マージは手動
 
 ## 使い方
 >Pod install  
@@ -69,4 +72,4 @@ outputを監視した。
 
 ## これからすること
 ・リリース  
-・CI/CD構築  
+・CD構築  
