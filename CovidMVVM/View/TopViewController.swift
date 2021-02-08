@@ -60,7 +60,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
         
         //MARK: Inputs
         let _ = viewModel.inputs.fetchCovidTotal.onNext(Void())
-        let _ = viewModel.inputs.fetchCovidPrefecture.onNext(Void())
+        
         
         //MARK: Outputs
         let _ = viewModel.outputs.apiProgress
@@ -94,6 +94,12 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
                 }
             }).disposed(by: disposeBag)
         
+        //レスポンスがきたら遷移する
+        let _ = viewModel.outputs.transitionChart
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.goChart()
+            }).disposed(by: disposeBag)
         
         //MARK: other
         let _ = reloadButton.rx.controlEvent(.touchUpInside)
@@ -122,7 +128,7 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
             .withLatestFrom(goChartVCButton.rx.tap)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
-                self.goChart()
+                let _ = self.viewModel.inputs.fetchCovidPrefecture.onNext(Void())
             }).disposed(by: disposeBag)
         
     }
