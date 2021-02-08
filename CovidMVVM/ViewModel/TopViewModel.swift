@@ -19,6 +19,7 @@ protocol TopViewModelOutPut {
     var apiProgress: Observable<Bool> {get}
     var error: Observable<Error> {get}
     var covidTotalResponse: Observable<CovidInfo.Total?>{get}
+    var transitionChart: Observable<Void> {get}
 }
 
 protocol TopViewModelType {
@@ -36,6 +37,7 @@ class TopViewModel: TopViewModelInput, TopViewModelOutPut {
     var apiProgress: Observable<Bool>
     var error: Observable<Error>
     var covidTotalResponse: Observable<CovidInfo.Total?>
+    var transitionChart: Observable<Void>
     
     private var disposeBag = DisposeBag()
     
@@ -50,6 +52,9 @@ class TopViewModel: TopViewModelInput, TopViewModelOutPut {
         
         let _error = PublishRelay<Error>()
         self.error = _error.asObservable()
+        
+        let _trasitionChart = PublishRelay<Void>()
+        self.transitionChart = _trasitionChart.asObservable()
         
         let _covidTotalResponse = BehaviorRelay<CovidInfo.Total?>(value: nil)
         self.covidTotalResponse = _covidTotalResponse.asObservable()
@@ -78,6 +83,7 @@ class TopViewModel: TopViewModelInput, TopViewModelOutPut {
             guard let element = element else {return}
             _apiProgress.accept(false)
             CovidSingleton.shared.prefecture = element
+            _trasitionChart.accept(Void())
         }).disposed(by: disposeBag)
         
         
