@@ -23,15 +23,6 @@ pod 'RxCocoa'
 pod 'Instantiate'  
 pod 'InstantiateStandard'  
 
-### 入れたけど使用しなかったライブラリ
-pod 'RxDataSources'  
-pod 'SwiftyJSON'  
-pod 'RealmSwift'  
-pod 'Firebase/Analytics'  
-pod 'Firebase/Auth'  
-pod 'Firebase/Core'  
-シンプルに必要なかった。RealmSwiftもシングルトンで代用すれば良い。
-
 ## CI
 Bitrize  
 pushしたらプルリク自動生成。マージは手動
@@ -43,7 +34,7 @@ pushしたらプルリク自動生成。マージは手動
 ### ・Flux
 まず、このアプリではAPIが二本しか使われていない為、Fluxを使う利点は大きくない。  
 が、ちょっとしたアピールのために盛り込んだ。  
-Fluxを使うことで処理がまとまるのが好き。  
+Fluxを使うことで処理をきれいにまとめることができる。
 
 ### ・Instantiate
 storyboardを1つにまとめると重すぎる為、  
@@ -56,19 +47,13 @@ Instantiateライブラリを使い、1storyboard1画面で構築した。
 
 ### ・アーキテクチャ
 MVVM + Flux  
-アーキテクチャにはMVVMを採用したが、自分の設計力では綺麗なMVVMに届かなかった。  
-ViewConrtollerでは、なるべく"表示のための値を見るだけ"とし、ViewModelからの  
-outputを監視した。  
-特に、トップ画面のPKHUDやチャート画面のサーチ結果を監視する部分など。  
+FatViewControllerにならないようMVVMで実装し、
+さらにViewModelでのAPI周りの処理を綺麗にするためFluxを用いた。
 
 ### その他
 このアプリを使うユーザーは、「感染状況が知りたい」  
 という想いが一番強い想定なので、ログイン機能は入れずに  
 トップ画面は感染状況を真ん中に太字で表示した。  
-
-アイデア実装だが、チャット画面では医者とチャットで相談でき、  
-健康診断画面では重症度が判定されカレンダーに記録されるようにした。  
-自分なりにUIUXを拘ったアプリ。  
 
 ## これからすること
 ・リリース  
