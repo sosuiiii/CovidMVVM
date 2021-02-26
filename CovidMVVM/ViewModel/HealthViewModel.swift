@@ -14,8 +14,8 @@ protocol HealthViewModelInput {
 }
 
 protocol HealthViewModelOutPut {
-    var title:String {get}
-    var message:String {get}
+    var title:Observable<String> {get}
+    var message:Observable<String> {get}
 }
 
 protocol HealthViewModelType {
@@ -29,8 +29,8 @@ class HealthViewModel: HealthViewModelInput, HealthViewModelOutPut {
     var switchAction: AnyObserver<Int>
     
     //MARK: Output
-    var title = ""
-    var message = ""
+    var title: Observable<String>
+    var message: Observable<String>
     
     //MARK: other
     private var disposeBag = DisposeBag()
@@ -42,6 +42,12 @@ class HealthViewModel: HealthViewModelInput, HealthViewModelOutPut {
         
         let _point = PublishRelay<Int>()
         self.point = _point.asObservable()
+        
+        let _title = PublishRelay<String>()
+        self.title = _title.asObservable()
+        
+        let _message = PublishRelay<String>()
+        self.message = _message.asObservable()
         
         //MARK: Input
         self.switchAction = AnyObserver<Int>() {value in
@@ -55,14 +61,14 @@ class HealthViewModel: HealthViewModelInput, HealthViewModelOutPut {
             
             self.sum += value
             if self.sum >= 4 {
-                self.title = "高"
-                self.message = "感染している可能性が\n比較的高いです。\nPCR検査をしましょう。"
+                _title.accept("高")
+                _message.accept("感染している可能性が\n比較的高いです。\nPCR検査をしましょう。")
             } else if self.sum >= 2 {
-                self.title = "中"
-                self.message = "やや感染している可能性が\nあります。外出は控えましょう。"
+                _title.accept("中")
+                _message.accept("やや感染している可能性が\nあります。外出は控えましょう。")
             } else {
-                self.title = "低"
-                self.message = "感染している可能性は\n今のところ低いです。\n今後も気をつけましょう"
+                _title.accept("低")
+                _message.accept("感染している可能性は\n今のところ低いです。\n今後も気をつけましょう")
             }
         }).disposed(by: disposeBag)
         

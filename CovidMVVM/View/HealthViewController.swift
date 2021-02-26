@@ -23,32 +23,36 @@ class HealthViewController: UIViewController, StoryboardInstantiatable {
     }
     var viewModel: HealthViewModelType!
     var today = ""
+    var titleText = ""
+    var message = ""
     var resultButton = UIButton(type: .system)
     var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        today = dateFormatter(day: Date())
+        today = Date().dateFormatter()
         setupView()
         
         //MARK: Input
-        let _ = resultButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(resultButton.rx.tap)
+        let _ = resultButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
-                let title = self.viewModel.outputs.title
-                let message = self.viewModel.outputs.message
-                AlertUtil.showHealthCheckResult(vc: self, title: title, message: message, today: self.today)
+                AlertUtil.showHealthCheckResult(vc: self, title: self.titleText, message: self.message, today: self.today)
             }).disposed(by: disposeBag)
         
+        viewModel.outputs.title
+            .subscribe(onNext: { text in
+                self.titleText = text
+            }).disposed(by: disposeBag)
+        
+        viewModel.outputs.message
+            .subscribe(onNext: { text in
+                self.message = text
+            }).disposed(by: disposeBag)
     }
     @objc func switchAction(sender: UISwitch) {
-        if sender.isOn {
-            viewModel.inputs.switchAction.onNext(1)
-        } else {
-            viewModel.inputs.switchAction.onNext(-1)
-        }
+        viewModel.inputs.switchAction.onNext(sender.isOn ? 1 : -1)
     }
     
 }
@@ -56,7 +60,7 @@ class HealthViewController: UIViewController, StoryboardInstantiatable {
 extension HealthViewController: FSCalendarDataSource, FSCalendarDelegate, FSCalendarDelegateAppearance {
     //Delegateで紐付けた関数
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-        if let result = UserDefaults.standard.string(forKey: dateFormatter(day: date)) {
+        if let result = UserDefaults.standard.string(forKey: date.dateFormatter()) {
             return result
         }
         return ""
@@ -68,7 +72,7 @@ extension HealthViewController: FSCalendarDataSource, FSCalendarDelegate, FSCale
         return .clear
     }
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, borderDefaultColorFor date: Date) -> UIColor? {
-        if dateFormatter(day: date) == today {
+        if date.dateFormatter() == today {
             return Colors.bluePurple
         }
         return .clear
@@ -77,38 +81,15 @@ extension HealthViewController: FSCalendarDataSource, FSCalendarDelegate, FSCale
         return 0.5
     }
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
-        if judgeWeekday(date) == 1 {
+        if date.judgeWeekday() == 1 {
             return UIColor(red: 150/255, green: 30/255, blue: 0/255, alpha: 0.9)
-        } else if judgeWeekday(date) == 7 {
+        } else if date.judgeWeekday() == 7 {
             return UIColor(red: 0/255, green: 30/255, blue: 150/255, alpha: 0.9)
         }
-        if judgeHoliday(date) {
+        if date.judgeHoliday() {
             return UIColor(red: 150/255, green: 30/255, blue: 0/255, alpha: 0.9)
         }
         return Colors.black
-    }
-    
-    //ロジックのための自作関数
-    //日付情報をフォーマットを整えて返す
-    func dateFormatter(day: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: day)
-    }
-    //曜日判定(日曜日:1/土曜日:7)
-    func judgeWeekday(_ date: Date) -> Int {
-        let calendar = Calendar(identifier: .gregorian)
-        return calendar.component(.weekday, from: date)
-    }
-    //祝日かどうかを判定
-    func judgeHoliday(_ date: Date) -> Bool {
-        let calendar = Calendar(identifier: .gregorian)
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
-        let holiday = CalculateCalendarLogic()
-        let judgeHoliday = holiday.judgeJapaneseHoliday(year: year, month: month, day: day)
-        return judgeHoliday
     }
 }
 
