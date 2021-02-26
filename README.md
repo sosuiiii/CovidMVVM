@@ -21,11 +21,9 @@ pod 'Moya/RxSwift', '~> 14.0'
 pod 'RxSwift'  
 pod 'RxCocoa'  
 pod 'Instantiate'  
-pod 'InstantiateStandard'  
-
-## CI
-Bitrize  
-pushしたらプルリク自動生成。マージは手動
+pod 'InstantiateStandard'
+pod 'Quick'
+pod 'Nimble'
 
 ## 使い方
 >Pod install  
@@ -50,6 +48,9 @@ MVVM + Flux
 FatViewControllerにならないようMVVMで実装し、
 さらにViewModelでのAPI周りの処理を綺麗にするためFluxを用いた。
 
+### テストコード
+健康診断ロジックをテストしている。
+
 ### その他
 このアプリを使うユーザーは、「感染状況が知りたい」  
 という想いが一番強い想定なので、ログイン機能は入れずに  
@@ -57,4 +58,4 @@ FatViewControllerにならないようMVVMで実装し、
 
 ## これからすること
 ・リリース  
-・CD構築  
+・CI/CD構築  
