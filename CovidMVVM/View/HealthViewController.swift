@@ -23,6 +23,8 @@ class HealthViewController: UIViewController, StoryboardInstantiatable {
     }
     var viewModel: HealthViewModelType!
     var today = ""
+    var titleText = ""
+    var message = ""
     var resultButton = UIButton(type: .system)
     var disposeBag = DisposeBag()
 
@@ -36,11 +38,18 @@ class HealthViewController: UIViewController, StoryboardInstantiatable {
         let _ = resultButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
-                let title = self.viewModel.outputs.title
-                let message = self.viewModel.outputs.message
-                AlertUtil.showHealthCheckResult(vc: self, title: title, message: message, today: self.today)
+                AlertUtil.showHealthCheckResult(vc: self, title: self.titleText, message: self.message, today: self.today)
             }).disposed(by: disposeBag)
         
+        viewModel.outputs.title
+            .subscribe(onNext: { text in
+                self.titleText = text
+            }).disposed(by: disposeBag)
+        
+        viewModel.outputs.message
+            .subscribe(onNext: { text in
+                self.message = text
+            }).disposed(by: disposeBag)
     }
     @objc func switchAction(sender: UISwitch) {
         viewModel.inputs.switchAction.onNext(sender.isOn ? 1 : -1)
