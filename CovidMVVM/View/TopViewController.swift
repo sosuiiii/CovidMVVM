@@ -56,9 +56,21 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
         setupAPILabel()
         setupAPILabel()
         
-        //MARK: Inputs
+        //MARK: Other
         let _ = viewModel.inputs.fetchCovidTotal.onNext(Void())
         let _ = viewModel.inputs.fetchCovidPrefecture.onNext(Void())
+        
+        let _ = goHealthVCButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.goHealthVC()
+            }).disposed(by: disposeBag)
+        
+        let _ = goChartVCButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.goChart()
+            }).disposed(by: disposeBag)
         
         //MARK: Outputs
         let _ = viewModel.outputs.apiProgress
@@ -90,23 +102,6 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
                     self.deathNum.text = "\(element.death)"
                     self.dischargeNum.text = "\(element.discharge)"
                 }
-            }).disposed(by: disposeBag)
-        
-        
-        //MARK: other
-        
-        let _ = goHealthVCButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(goHealthVCButton.rx.tap)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else {return}
-                self.goHealthVC()
-            }).disposed(by: disposeBag)
-        
-        let _ = goChartVCButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(goChartVCButton.rx.tap)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else {return}
-                self.goChart()
             }).disposed(by: disposeBag)
         
     }

@@ -33,8 +33,7 @@ class HealthViewController: UIViewController, StoryboardInstantiatable {
         setupView()
         
         //MARK: Input
-        let _ = resultButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(resultButton.rx.tap)
+        let _ = resultButton.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else {return}
                 let title = self.viewModel.outputs.title
@@ -44,11 +43,7 @@ class HealthViewController: UIViewController, StoryboardInstantiatable {
         
     }
     @objc func switchAction(sender: UISwitch) {
-        if sender.isOn {
-            viewModel.inputs.switchAction.onNext(1)
-        } else {
-            viewModel.inputs.switchAction.onNext(-1)
-        }
+        viewModel.inputs.switchAction.onNext(sender.isOn ? 1 : -1)
     }
     
 }
