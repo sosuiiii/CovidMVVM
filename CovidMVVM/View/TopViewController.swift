@@ -40,8 +40,6 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
     let discharge = UILabel() //退院
     let dischargeNum = UILabel()
     
-    var reloadButton = UIButton(type: .system)
-    let chatButton = UIButton(type: .system)
     let goHealthVCButton = UIButton(type: .system)
     let goChartVCButton = UIButton(type: .system)
     
@@ -58,9 +56,21 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
         setupAPILabel()
         setupAPILabel()
         
-        //MARK: Inputs
+        //MARK: Other
         let _ = viewModel.inputs.fetchCovidTotal.onNext(Void())
         let _ = viewModel.inputs.fetchCovidPrefecture.onNext(Void())
+        
+        let _ = goHealthVCButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.goHealthVC()
+            }).disposed(by: disposeBag)
+        
+        let _ = goChartVCButton.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {return}
+                self.goChart()
+            }).disposed(by: disposeBag)
         
         //MARK: Outputs
         let _ = viewModel.outputs.apiProgress
@@ -92,37 +102,6 @@ class TopViewController: UIViewController, StoryboardInstantiatable {
                     self.deathNum.text = "\(element.death)"
                     self.dischargeNum.text = "\(element.discharge)"
                 }
-            }).disposed(by: disposeBag)
-        
-        
-        //MARK: other
-        let _ = reloadButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(reloadButton.rx.tap)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else {return}
-                self.loadView()
-                self.viewDidLoad()
-            }).disposed(by: disposeBag)
-        
-        let _ = chatButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(chatButton.rx.tap)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else {return}
-                self.goChatVC()
-            }).disposed(by: disposeBag)
-        
-        let _ = goHealthVCButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(goHealthVCButton.rx.tap)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else {return}
-                self.goHealthVC()
-            }).disposed(by: disposeBag)
-        
-        let _ = goChartVCButton.rx.controlEvent(.touchUpInside)
-            .withLatestFrom(goChartVCButton.rx.tap)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else {return}
-                self.goChart()
             }).disposed(by: disposeBag)
         
     }
@@ -197,8 +176,6 @@ extension TopViewController {
         let height = view.frame.size.height / 2
         createButton(goHealthVCButton, "健康管理", size: size, y: height + 190, color: Colors.blue)
         createButton(goChartVCButton, "県別状況", size: size, y: height + 240, color: Colors.blue)
-        createImageButton(chatButton, "chat", x: view.frame.size.width - 50)
-        createImageButton(reloadButton, "reload", x: 10)
         
         let imageView = UIImageView()
         let image = UIImage(named: "virus")

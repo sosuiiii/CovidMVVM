@@ -26,6 +26,9 @@ target 'CovidMVVM' do
   pod 'RealmSwift'
   pod 'Instantiate'
   pod 'InstantiateStandard'
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'RxTest'
 
   target 'CovidMVVMTests' do
     inherit! :search_paths
