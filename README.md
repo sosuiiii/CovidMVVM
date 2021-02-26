@@ -47,6 +47,8 @@ Instantiateライブラリを使い、1storyboard1画面で構築した。
 MVVM + Flux  
 FatViewControllerにならないようMVVMで実装し、
 さらにViewModelでのAPI周りの処理を綺麗にするためFluxを用いた。
+小規模のためFluxは必要ないが、あえて利用している。
+ViewModelのインターフェースはKickstarterのデザインパターンを採用している。
 
 ### テストコード
 健康診断ロジックをテストしている。
