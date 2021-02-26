@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0779EBBA88CB9218AF97E1B2 /* Pods_CovidMVVM_CovidMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D87E2F74FF33BFF087DB3BA0 /* Pods_CovidMVVM_CovidMVVMUITests.framework */; };
 		3D35DB6B25CB688E00019A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6A25CB688E00019A84 /* AppDelegate.swift */; };
 		3D35DB6D25CB688E00019A84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6C25CB688E00019A84 /* SceneDelegate.swift */; };
 		3D35DB6F25CB688E00019A84 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D35DB6E25CB688E00019A84 /* TopViewController.swift */; };
@@ -97,6 +96,7 @@
 		3DC60FD525CE68BD00EA3EC0 /* Flux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC60FD425CE68BD00EA3EC0 /* Flux.swift */; };
 		3DC6110825CFFC0000EA3EC0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6110725CFFC0000EA3EC0 /* GoogleService-Info.plist */; };
 		5F148E1A7747290779467EE9 /* Pods_CovidMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */; };
+		7778A6AE9C307C7B494A031B /* Pods_CovidMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D099FABD0B9B13EBBCF033D4 /* Pods_CovidMVVMUITests.framework */; };
 		948E294878831F043BB01757 /* Pods_CovidMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,11 +163,13 @@
 		3D82917525E913B1009A1EF5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		3DC60FD425CE68BD00EA3EC0 /* Flux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flux.swift; sourceTree = "<group>"; };
 		3DC6110725CFFC0000EA3EC0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		67209592CD2D3094DD4EDEA3 /* Pods-CovidMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVMUITests/Pods-CovidMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D437B7CA6A96DCFC165004A /* Pods-CovidMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVM/Pods-CovidMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDDA328E6D03E9C87A517BD9 /* Pods-CovidMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-CovidMVVMUITests/Pods-CovidMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D099FABD0B9B13EBBCF033D4 /* Pods_CovidMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D87E2F74FF33BFF087DB3BA0 /* Pods_CovidMVVM_CovidMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMVVM_CovidMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -192,7 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0779EBBA88CB9218AF97E1B2 /* Pods_CovidMVVM_CovidMVVMUITests.framework in Frameworks */,
+				7778A6AE9C307C7B494A031B /* Pods_CovidMVVMUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +340,8 @@
 				B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */,
 				79F05A11F1AB0B3209E44BF0 /* Pods-CovidMVVMTests.debug.xcconfig */,
 				23EF72E7D28C42B9214ECFB4 /* Pods-CovidMVVMTests.release.xcconfig */,
+				CDDA328E6D03E9C87A517BD9 /* Pods-CovidMVVMUITests.debug.xcconfig */,
+				67209592CD2D3094DD4EDEA3 /* Pods-CovidMVVMUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -346,8 +350,8 @@
 			isa = PBXGroup;
 			children = (
 				D448D316BB7FB18B3574206C /* Pods_CovidMVVM.framework */,
-				D87E2F74FF33BFF087DB3BA0 /* Pods_CovidMVVM_CovidMVVMUITests.framework */,
 				FA16E02F20BDFA6841E611D8 /* Pods_CovidMVVMTests.framework */,
+				D099FABD0B9B13EBBCF033D4 /* Pods_CovidMVVMUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -382,6 +386,7 @@
 				3D35DB7925CB689000019A84 /* Sources */,
 				3D35DB7A25CB689000019A84 /* Frameworks */,
 				3D35DB7B25CB689000019A84 /* Resources */,
+				BB8A3A976CB27860C330AAFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -525,7 +530,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CovidMVVM-CovidMVVMUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CovidMVVMUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -538,15 +543,32 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVMUITests/Pods-CovidMVVMUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVMUITests/Pods-CovidMVVMUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidMVVM-CovidMVVMUITests/Pods-CovidMVVM-CovidMVVMUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidMVVMUITests/Pods-CovidMVVMUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB8A3A976CB27860C330AAFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidMVVMTests/Pods-CovidMVVMTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE02265F545D8D5C8AA52097 /* [CP] Embed Pods Frameworks */ = {
@@ -841,15 +863,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8CF3WRD2QV;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = L496FTQGL3;
 				INFOPLIST_FILE = CovidMVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = FirstProject.CovidMVVM;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hoge.covidApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = covidApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -861,15 +887,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8CF3WRD2QV;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = L496FTQGL3;
 				INFOPLIST_FILE = CovidMVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = FirstProject.CovidMVVM;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hoge.covidApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = covidApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -921,7 +951,7 @@
 		};
 		3D35DB9825CB689000019A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37DDDBF56FA63E7A8EDFBB87 /* Pods-CovidMVVM-CovidMVVMUITests.debug.xcconfig */;
+			baseConfigurationReference = CDDA328E6D03E9C87A517BD9 /* Pods-CovidMVVMUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -941,7 +971,7 @@
 		};
 		3D35DB9925CB689000019A84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0BFD043F59D15CD526D13ED /* Pods-CovidMVVM-CovidMVVMUITests.release.xcconfig */;
+			baseConfigurationReference = 67209592CD2D3094DD4EDEA3 /* Pods-CovidMVVMUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
