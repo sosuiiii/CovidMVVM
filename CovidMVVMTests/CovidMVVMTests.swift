@@ -12,7 +12,7 @@ import RxTest
 
 @testable import CovidMVVM
 
-class Test: QuickSpec {
+class HealthCheckTest: QuickSpec {
     let disposeBag = DisposeBag()
     
     override func spec() {
