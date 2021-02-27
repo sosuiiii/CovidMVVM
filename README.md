@@ -21,9 +21,9 @@ pod 'Moya/RxSwift', '~> 14.0'
 pod 'RxSwift'  
 pod 'RxCocoa'  
 pod 'Instantiate'  
-pod 'InstantiateStandard'
-pod 'Quick'
-pod 'Nimble'
+pod 'InstantiateStandard' 
+pod 'Quick' 
+pod 'Nimble' 
 
 ## 使い方
 >Pod install  
