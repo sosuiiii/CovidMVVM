@@ -53,8 +53,13 @@ class HealthCheckTest: QuickSpec {
                         Recorded.next(3, "中"),
                         Recorded.next(4, "中")
                     ]))
+                    expect(messageObserver.events).to(equal ([
+                        Recorded.next(1, "感染している可能性は\n今のところ低いです。\n今後も気をつけましょう"),
+                        Recorded.next(2, "やや感染している可能性が\nあります。外出は控えましょう。"),
+                        Recorded.next(3, "やや感染している可能性が\nあります。外出は控えましょう。"),
+                        Recorded.next(4, "やや感染している可能性が\nあります。外出は控えましょう。")
+                    ]))
                 }
-                
             }
         }
     }
