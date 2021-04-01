@@ -3,7 +3,7 @@
 <img width="688" alt="スクリーンショット 2021-02-07 17 51 23" src="https://user-images.githubusercontent.com/41160560/107141590-20f1c780-696d-11eb-92e5-e63d24a8b54d.png">
 
 
-## Kindle出版/40冊ほど販売
+## Kindle 
 【Swift5】 つくって学ぼ iOSアプリ開発  
 https://t.co/qR6Bsx3Itz?amp=1  
 
