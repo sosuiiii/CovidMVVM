@@ -3,7 +3,7 @@
 <img width="688" alt="スクリーンショット 2021-02-07 17 51 23" src="https://user-images.githubusercontent.com/41160560/107141590-20f1c780-696d-11eb-92e5-e63d24a8b54d.png">
 
 
-## Kindle出版/40冊ほど販売
+## Kindle 
 【Swift5】 つくって学ぼ iOSアプリ開発  
 https://t.co/qR6Bsx3Itz?amp=1  
 
@@ -21,12 +21,27 @@ pod 'Moya/RxSwift', '~> 14.0'
 pod 'RxSwift'  
 pod 'RxCocoa'  
 pod 'Instantiate'  
-pod 'InstantiateStandard'
-pod 'Quick'
-pod 'Nimble'
+pod 'InstantiateStandard'  
+pod 'Quick'  
+pod 'Nimble'  
 
 ## 使い方
 >Pod install  
+
+## アプリについて
+### ・アーキテクチャ 
+MVVM + Flux   
+実務では適さないアーキテクチャは取り入れるべきではないが、個人開発なので  
+(小規模のためFluxは必要ないが)習得後に使用したかったため取り入れた。  
+ViewModelのインターフェースはKickstarterのデザインパターンを採用している。  
+アプリ開発第一号のリプレイスで、綺麗に書き換えるのが難しかった。  
+
+### テストコード 
+Quick/NimbleでRxSwiftのストリームをテスト。 
+(健康診断ロジックをテスト) 
+
+### CI/CD
+Bitrize
 
 ## 意識したこと
 ### ・Flux
@@ -43,16 +58,6 @@ Instantiateライブラリを使い、1storyboard1画面で構築した。
 コントラストを強くしないことで、目に優しい色とした。  
 カラーホイールの同一円周上のカラーを使うことで、色のまばら感が出ないようにした。  
 
-### ・アーキテクチャ
-MVVM + Flux  
-FatViewControllerにならないようMVVMで実装し、
-さらにViewModelでのAPI周りの処理を綺麗にするためFluxを用いた。
-小規模のためFluxは必要ないが、あえて利用している。
-ViewModelのインターフェースはKickstarterのデザインパターンを採用している。
-
-### テストコード
-健康診断ロジックをテストしている。
-
 ### その他
 このアプリを使うユーザーは、「感染状況が知りたい」  
 という想いが一番強い想定なので、ログイン機能は入れずに  
@@ -60,4 +65,5 @@ ViewModelのインターフェースはKickstarterのデザインパターンを
 
 ## これからすること
 ・リリース  
-・CI/CD構築  
+公認の機関でアプリを公開するよう言われたため、  
+リリースはできていない。
