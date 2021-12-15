@@ -50,7 +50,8 @@ class ChartViewModel: ChartViewModelInput, ChartViewModelOutPut {
         
         //MARK: Initialize
         self.covidPrefecture = data.sorted(by: {a,b in return a.cases > b.cases} )
-        
+        print(covidPrefecture)
+        print("squash_fix6")
         var entries:[BarChartDataEntry] = []
         for i in 0...9 {
             entries += [BarChartDataEntry(x: Double(i), y: Double(self.covidPrefecture[i].cases))]
